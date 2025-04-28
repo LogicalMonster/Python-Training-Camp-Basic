@@ -20,4 +20,15 @@ def student_dict_operations(students_dict, operation, *args):
     - 根据操作返回不同结果
     """
     # 请在下方编写代码
-    pass 
+    if operation == "add":
+        # 添加学生成绩
+        name, score = args
+        students_dict[name] = score
+    elif operation == "remove":
+        del students_dict[args[0]]
+    elif operation == "update":
+        name, score = args
+        students_dict[name] = score
+    elif operation == "get":
+        return students_dict[args[0]]
+    return students_dict
